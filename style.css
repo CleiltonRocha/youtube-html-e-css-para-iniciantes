@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Inter, sans-serif;
+  background-image: url('./assets/bg-hero.png');  
+  background-size: cover;
+  background-position: center;
+  
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav .logo img {
+  width: 40px;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+} 
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #767676;
+  font-weight: 500;
+} 
+
+nav ul li a:hover {
+  color: #ebebeb;
+}
+
+
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  height: calc(100vh - 52px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-align: center;
+  letter-spacing: -2px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+
+  opacity: 0;
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero p {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 400;
+  color: #767676;
+  margin-bottom: 2rem;
+  max-width: 80%;
+
+  opacity: 0;
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.hero .features {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero .features div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  opacity: 0;
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.hero .features div h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.hero .btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #E6E5E6;
+  color: #1D1A1D;
+  border: 2px solid #A2A2A2;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 2rem;
+  transition: .2s ease-in-out;
+
+  opacity: 0;
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 2s;
+}
+
+.hero .btn:hover {
+  background-color: #1D1A1D;
+  color: #E6E5E6;
+}
+
+.hero img {
+  position: absolute;
+  bottom: -90%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #365FF7, #41C3D5);
+  -webkit-background-clip: text;
+  color: transparent;
+}
